@@ -113,3 +113,13 @@ class TestMusicViewSet(TestCase):
         self.assertEqual(response['content-type'], 'application/json')
         self.assertEqual(len(response.json()), 0)
         self.assertEqual(type(response.json()), list)
+
+    def test_get_music_by_iswc_with_no_iswc_param_key(self):
+        response = self.client.get(reverse('music-get-music-by-iswc'), {'query': 'T8213567113'})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json().get('detail'), 'Field iswc is required')
+
+    def test_get_music_by_iswc_with_empty_string_iswc_param_value(self):
+        response = self.client.get(reverse('music-get-music-by-iswc'), {'iswc': ''})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json().get('detail'), 'Field iswc is required')

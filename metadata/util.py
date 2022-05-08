@@ -62,3 +62,11 @@ def write_csv_to_database(file) -> Any:
         return 'Music data loaded successfully'
     except (ValueError, Exception):
         raise
+
+
+def validate_required_fields(fields: dict):
+    return {
+        'detail': f'Field {field} is required'
+        for field in fields
+        if fields.get(field) is None or fields.get(field) is ''
+    }

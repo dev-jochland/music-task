@@ -77,15 +77,16 @@ docker-compose run --rm web python manage.py test
 - You should see the image below after the test script runs
   
 ```python
-Found 11 test(s).
+Found 13 test(s).
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
-...........
+.............
 ----------------------------------------------------------------------
-Ran 11 tests in 0.077s
+Ran 13 tests in 0.086s
 
 OK
 Destroying test database for alias 'default'...
+
 ```
 
 ## Testing on Postman
