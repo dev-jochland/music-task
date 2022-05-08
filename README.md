@@ -5,7 +5,7 @@
 - The answers to the questions asked for this backend challenge are provided at the end of this README document.
 
 ## STEPS TO RUN THIS PROJECT ON YOUR MACHINE
-```NOTE:``` You need to have docker installed locally to complete the steps below.
+```NOTE:``` You need to have ```docker``` and ```git``` installed locally to complete the steps below.
 - Clone the project to your local machine by opening your terminal and type:
 ```python
 git clone https://github.com/dev-jochland/music-task.git
