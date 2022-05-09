@@ -29,7 +29,7 @@ test_music_data = [
 ]
 
 
-class TestUtil(TestCase):
+class TestUtilityFunction(TestCase):
 
     def setUp(self):
         self.file_name = 'test.csv'
