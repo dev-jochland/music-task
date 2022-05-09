@@ -22,4 +22,4 @@ class MusicViewSet(viewsets.ViewSet):
             music_list = list(Music.objects.filter(iswc=iswc, is_deleted=False).values())
             return JsonResponse(music_list, safe=False, status=status.HTTP_200_OK)
         except Exception as e:
-            return JsonResponse({'detail': str(e)})
+            return JsonResponse({'detail': str(e)}, status=status.HTTP_400_BAD_REQUEST)
