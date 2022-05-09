@@ -10,7 +10,7 @@ from rest_framework import status
 from metadata.models import Music
 from metadata.util import read_csv_file, clean_csv_data, write_csv_to_database
 
-raw_test__data = [
+raw_test_data = [
     ['title', 'contributors', 'iswc'],
     ['Shape of You', 'Edward Christopher Sheeran', 'T9204649558'],
     ['Adventure of a Lifetime', 'O Brien Edward John|Yorke Thomas Edward|Greenwood Colin Charles',
@@ -35,13 +35,13 @@ class TestUtil(TestCase):
         self.file_name = 'test.csv'
         with open(self.file_name, 'w') as test_file:
             writer = csv.writer(test_file)
-            writer.writerow(raw_test__data[0])
-            writer.writerow(raw_test__data[1])
-            writer.writerow(raw_test__data[2])
-            writer.writerow(raw_test__data[3])
-            writer.writerow(raw_test__data[4])
-            writer.writerow(raw_test__data[5])
-            writer.writerow(raw_test__data[6])
+            writer.writerow(raw_test_data[0])
+            writer.writerow(raw_test_data[1])
+            writer.writerow(raw_test_data[2])
+            writer.writerow(raw_test_data[3])
+            writer.writerow(raw_test_data[4])
+            writer.writerow(raw_test_data[5])
+            writer.writerow(raw_test_data[6])
 
         self.bad_file = 'test.txt'
         with open(self.bad_file, 'w') as f:
